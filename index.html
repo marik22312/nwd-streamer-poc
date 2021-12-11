@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script>
+		var parcelRequire;
+	</script>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+		<input type="text" id="peer-id-input" />
+		<button id="connect-video-button">Connect Video</button>
+		<button id="connect-mic-button">Connect Mic</button>
+		<video autoplay id="video-display"></video>
+		<audio autoplay id="audio-display"></audio>
+		<p>YourId: <span id="my-peer-id"></span></p>
+	</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
