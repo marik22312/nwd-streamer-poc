@@ -17,7 +17,6 @@ peer.on('open', function(id) {
 
   // @ts-expect-error
   connectButton.addEventListener('click', async () => {
-	  // @ts-expect-error
 	  const mediaStream = await navigator.mediaDevices.getDisplayMedia({video: true});
 	  // @ts-expect-error
 	  const peerID = peerIdInput.value;
@@ -34,7 +33,7 @@ peer.on('open', function(id) {
 	  // @ts-expect-error
 	  const peerID = peerIdInput.value;
 	// peer.connect(peerID)
-	const connection = peer.call(peerID, mediaStream, {
+	peer.call(peerID, mediaStream, {
 		metadata: {
 			type: 'AUDIO'
 		}
@@ -47,7 +46,7 @@ peer.on('open', function(id) {
 	call.answer()
 
 	switch (call.metadata.type) {
-		case 'VIDEO':gi
+		case 'VIDEO':
 			console.log('SetVideo')
 			call.on('stream', (stream) => {
 				// @ts-expect-error
